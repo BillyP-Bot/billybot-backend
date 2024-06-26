@@ -325,4 +325,9 @@ export const schemas = plugin(async function (app: FastifyInstance) {
 		type: "array",
 		items: { $ref: "openaiImage#" }
 	});
+	app.addSchema({
+		$id: "openaiCompletionArray",
+		type: "array",
+		items: { $ref: "openaiCompletion#" }
+	});
 });
